@@ -1,0 +1,9 @@
+{
+  "python": "3.13.18",
+  "mediapipe": "0.10.35",
+  "opencv": "5.0.0",
+  "numpy": "2.4.6",
+  "scikit-learn": "1.7.2",
+  "joblib": "1.6.0",
+  "matplotlib": "3.10.0"
+}

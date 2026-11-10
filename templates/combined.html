@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FSL to Text</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ url_for('static', filename='combined.css') }}">
+  <script defer src="{{ url_for('static', filename='combined.js') }}"></script>
+</head>
+<body>
+  <main>
+    <header class="title">
+      <h1>FSL to Text</h1>
+      <p>Use your camera to turn Filipino Sign Language letters and signs into text.</p>
+    </header>
+    <div class="workspace">
+      <section aria-labelledby="camera-title">
+        <div class="section-head">
+          <h2 id="camera-title">Camera</h2>
+          <button id="camera-toggle" type="button">Start camera</button>
+        </div>
+        <div class="preview">
+          <img id="preview" alt="Live webcam preview" hidden>
+          <p id="preview-empty">Camera is off</p>
+        </div>
+        <div class="mode-picker" role="group" aria-label="Recognition mode">
+          <button type="button" data-mode="letters" aria-pressed="true">Fingerspelling</button>
+          <button type="button" data-mode="signs" aria-pressed="false">Signs</button>
+        </div>
+        <p id="instructions">Hold each letter steady until it appears in your text. Lower your hand briefly to repeat a letter.</p>
+        <div class="result">
+          <p id="status" role="status">Start the camera to begin.</p>
+          <p id="prediction" hidden></p>
+          <p id="score" hidden></p>
+          <p id="countdown" aria-hidden="true" hidden></p>
+        </div>
+        <div class="actions">
+          <button id="detection-toggle" type="button" class="primary" disabled>Start detection</button>
+          <button id="record" type="button" class="primary" hidden>Record sign</button>
+          <button id="cancel" type="button" hidden>Cancel recording</button>
+          <button id="accept" type="button" class="primary" hidden>Add sign</button>
+          <button id="mirror" type="button" aria-pressed="false">Mirror hand input</button>
+        </div>
+      </section>
+      <section class="text-panel" aria-labelledby="text-title">
+        <h2 id="text-title"><label for="draft">Your text</label></h2>
+        <textarea id="draft" rows="10" placeholder="Detected letters and signs appear here."></textarea>
+        <div class="actions">
+          <button id="space" type="button">Space</button>
+          <button id="backspace" type="button">Backspace</button>
+          <button id="clear" type="button">Clear</button>
+          <button id="copy" type="button">Copy</button>
+        </div>
+        <p id="text-status" role="status"></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

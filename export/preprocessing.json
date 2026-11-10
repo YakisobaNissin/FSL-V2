@@ -1,0 +1,22 @@
+{
+  "feature_version": 1,
+  "sample_fps": 15,
+  "ordered_frames": 12,
+  "margin_frames": 2,
+  "min_hand_frames": 3,
+  "shoulder_visibility": 0.5,
+  "frame_width": 133,
+  "hand_order": [
+    "left",
+    "right"
+  ],
+  "summary_order": [
+    "mean",
+    "std",
+    "min",
+    "max"
+  ],
+  "model_url": "https://storage.googleapis.com/mediapipe-models/holistic_landmarker/holistic_landmarker/float16/latest/holistic_landmarker.task",
+  "feature_size": 2128,
+  "model_sha256": "e2dab61191e2dcd0a15f943d8e3ed1dce13c82dfa597b9dd39f562975a50c3f8"
+}

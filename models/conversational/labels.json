@@ -1,0 +1,82 @@
+{
+  "0": {
+    "label": "GOOD MORNING",
+    "category": "GREETING"
+  },
+  "1": {
+    "label": "GOOD AFTERNOON",
+    "category": "GREETING"
+  },
+  "2": {
+    "label": "GOOD EVENING",
+    "category": "GREETING"
+  },
+  "3": {
+    "label": "HELLO",
+    "category": "GREETING"
+  },
+  "4": {
+    "label": "HOW ARE YOU",
+    "category": "GREETING"
+  },
+  "5": {
+    "label": "IM FINE",
+    "category": "GREETING"
+  },
+  "6": {
+    "label": "NICE TO MEET YOU",
+    "category": "GREETING"
+  },
+  "7": {
+    "label": "THANK YOU",
+    "category": "GREETING"
+  },
+  "8": {
+    "label": "YOURE WELCOME",
+    "category": "GREETING"
+  },
+  "9": {
+    "label": "SEE YOU TOMORROW",
+    "category": "GREETING"
+  },
+  "10": {
+    "label": "UNDERSTAND",
+    "category": "SURVIVAL"
+  },
+  "11": {
+    "label": "DON'T UNDERSTAND",
+    "category": "SURVIVAL"
+  },
+  "12": {
+    "label": "KNOW",
+    "category": "SURVIVAL"
+  },
+  "13": {
+    "label": "DON'T KNOW",
+    "category": "SURVIVAL"
+  },
+  "14": {
+    "label": "NO",
+    "category": "SURVIVAL"
+  },
+  "15": {
+    "label": "YES",
+    "category": "SURVIVAL"
+  },
+  "16": {
+    "label": "WRONG",
+    "category": "SURVIVAL"
+  },
+  "17": {
+    "label": "CORRECT",
+    "category": "SURVIVAL"
+  },
+  "18": {
+    "label": "SLOW",
+    "category": "SURVIVAL"
+  },
+  "19": {
+    "label": "FAST",
+    "category": "SURVIVAL"
+  }
+}

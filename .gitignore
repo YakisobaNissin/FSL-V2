@@ -1,0 +1,4 @@
+.venv-browser/
+.venv-letters/
+__pycache__/
+*.py[cod]
