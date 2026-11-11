@@ -10,42 +10,34 @@
 </head>
 <body>
   <main>
-    <header class="title">
-      <h1>FSL to Text</h1>
-      <p>Use your camera to turn Filipino Sign Language letters and signs into text.</p>
-    </header>
+    <h1 class="visually-hidden">FSL to Text</h1>
     <div class="workspace">
       <section aria-labelledby="camera-title">
-        <div class="section-head">
-          <h2 id="camera-title">Camera</h2>
-          <button id="camera-toggle" type="button">Start camera</button>
-        </div>
+        <h2 id="camera-title" class="visually-hidden">Camera</h2>
         <div class="preview">
           <img id="preview" alt="Live webcam preview" hidden>
-          <p id="preview-empty">Camera is off</p>
         </div>
-        <div class="mode-picker" role="group" aria-label="Recognition mode">
-          <button type="button" data-mode="letters" aria-pressed="true">Fingerspelling</button>
-          <button type="button" data-mode="signs" aria-pressed="false">Signs</button>
-        </div>
-        <p id="instructions">Hold each letter steady until it appears in your text. Lower your hand briefly to repeat a letter.</p>
-        <div class="result">
-          <p id="status" role="status">Start the camera to begin.</p>
-          <p id="prediction" hidden></p>
-          <p id="score" hidden></p>
-          <p id="countdown" aria-hidden="true" hidden></p>
-        </div>
-        <div class="actions">
-          <button id="detection-toggle" type="button" class="primary" disabled>Start detection</button>
+        <div class="camera-controls actions">
+          <button id="camera-toggle" type="button" aria-disabled="true">Start camera</button>
+          <div class="actions" role="group" aria-label="Recognition mode">
+            <button type="button" data-mode="letters" aria-pressed="true" aria-disabled="true">Fingerspelling</button>
+            <button type="button" data-mode="signs" aria-pressed="false" aria-disabled="true">Signs</button>
+          </div>
+          <button id="detection-toggle" type="button" class="primary" aria-disabled="true">Start detection</button>
           <button id="record" type="button" class="primary" hidden>Record sign</button>
           <button id="cancel" type="button" hidden>Cancel recording</button>
           <button id="accept" type="button" class="primary" hidden>Add sign</button>
-          <button id="mirror" type="button" aria-pressed="false">Mirror hand input</button>
+          <button id="mirror" type="button" aria-pressed="false" aria-disabled="true">Mirror hand input</button>
+        </div>
+        <div class="camera-feedback">
+          <p id="status" class="visually-hidden" role="status" aria-atomic="true"></p>
+          <p id="feedback" aria-hidden="true">Connecting…</p>
+          <p id="countdown" aria-hidden="true" hidden></p>
         </div>
       </section>
       <section class="text-panel" aria-labelledby="text-title">
         <h2 id="text-title"><label for="draft">Your text</label></h2>
-        <textarea id="draft" rows="10" placeholder="Detected letters and signs appear here."></textarea>
+        <textarea id="draft" rows="4"></textarea>
         <div class="actions">
           <button id="space" type="button">Space</button>
           <button id="backspace" type="button">Backspace</button>
@@ -53,6 +45,13 @@
           <button id="copy" type="button">Copy</button>
         </div>
         <p id="text-status" role="status"></p>
+        <section class="result" aria-labelledby="result-title">
+          <h3 id="result-title">Recognition result</h3>
+          <p id="result-empty">No prediction yet.</p>
+          <p id="prediction" hidden></p>
+          <p id="score" hidden></p>
+          <p id="review" hidden></p>
+        </section>
       </section>
     </div>
   </main>
